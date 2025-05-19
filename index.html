@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Distributeur de boissons</title>
+    <link rel="stylesheet" href="./global.css" />
+    <script defer src="./script.js"></script>
+  </head>
+
+  <body>
+    <main>
+      <section>
+        <h1>Vending machine 🧃</h1>
+
+        <div class="machine-container">
+          <section class="drinks-grid">
+            <div class="drink">
+              <img src="./assets/espresso.png" alt="" />
+              <p class="drinks" id="espresso">1</p>
+            </div>
+
+            <div class="drink">
+              <img src="./assets/frappe.png" alt="" />
+              <p class="drinks" id="frappe">2</p>
+            </div>
+
+            <div class="drink">
+              <img src="./assets/iced-coffee.png" alt="" />
+              <p class="drinks" id="iced-coffee">3</p>
+            </div>
+
+            <div class="drink">
+              <img src="./assets/tea.png" alt="" />
+              <p class="drinks" id="tea">4</p>
+            </div>
+
+            <div class="drink">
+              <img src="./assets/water.png" alt="" />
+              <p class="drinks" id="water">5</p>
+            </div>
+
+            <div class="drink">
+              <img src="./assets/coca.png" alt="" />
+              <p class="drinks" id="coca">6</p>
+            </div>
+          </section>
+
+          <section class="drinks-selection">
+            <div id="screen" class="screen">
+              <p>Please select a drink number</p>
+            </div>
+
+            <div class="buttons-container">
+              <button class="button-drinks" value="1">1</button>
+              <button class="button-drinks" value="2">2</button>
+              <button class="button-drinks" value="3">3</button>
+              <button class="button-drinks" value="4">4</button>
+              <button class="button-drinks" value="5">5</button>
+              <button class="button-drinks" value="6">6</button>
+              <button class="button-drinks" value="7">7</button>
+              <button class="button-drinks" value="8">8</button>
+              <button class="button-drinks" value="9">9</button>
+              <button class="button-drinks" value="0">0</button>
+            </div>
+
+            <div>
+              <button id="reset">Reset</button>
+              <button id="validate">OK</button>
+            </div>
+          </section>
+
+          <section class="drink-result-container">
+            <div id="drink-result">
+              <img id="img-result" src="" alt="" />
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
