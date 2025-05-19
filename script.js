@@ -18,6 +18,26 @@ const WATER_QUANTITY = document.getElementById("water-stock");
 const COCA = document.getElementById("coca");
 const COCA_QUANTITY = document.getElementById("coca-stock");
 
+const ORANGE = document.getElementById("orange");
+const ORANGE_QUANTITY = document.getElementById("orange-stock");
+
+const ENERGY = document.getElementById("orange");
+const ENERGY_QUANTITY = document.getElementById("energy-stock");
+
+const LEMON = document.getElementById("orange");
+const LEMON_QUANTITY = document.getElementById("lemon-stock");
+
+const BIO = document.getElementById("orange");
+const BIO_QUANTITY = document.getElementById("bio-stock");
+
+const WATERMELON = document.getElementById("watermelon");
+const WATERMELON_QUANTITY = document.getElementById("watermelon-stock");
+
+const SPARKLING_WATER = document.getElementById("sparkling-water");
+const SPARKLING_WATER_QUANTITY = document.getElementById(
+  "sparkling-water-stock"
+);
+
 const SCREEN = document.getElementById("screen");
 
 const VALID = document.getElementById("validate");
@@ -113,8 +133,13 @@ VALID.addEventListener("click", () => {
       break;
 
     case "7":
-      IMG_RESULT.src = "";
-      SCREEN.innerText = "This drink is not available atm";
+      if (ORANGE_QUANTITY.textContent > 0) {
+        ORANGE_QUANTITY.textContent -= 1;
+        IMG_RESULT.src = "./assets/orange-juice.png";
+        SCREEN.innerText = "Enjoy your drink! 😎";
+      } else {
+        SCREEN.innerText = "Out of stock :(";
+      }
       break;
 
     case "8":
@@ -127,7 +152,17 @@ VALID.addEventListener("click", () => {
       SCREEN.innerText = "This drink is not available atm";
       break;
 
-    case "0":
+    case "10":
+      IMG_RESULT.src = "";
+      SCREEN.innerText = "This drink is not available atm";
+      break;
+
+    case "11":
+      IMG_RESULT.src = "";
+      SCREEN.innerText = "This drink is not available atm";
+      break;
+
+    case "12":
       IMG_RESULT.src = "";
       SCREEN.innerText = "This drink is not available atm";
       break;

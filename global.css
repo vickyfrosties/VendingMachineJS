@@ -3,22 +3,35 @@
   padding: 0;
   box-sizing: border-box;
   line-height: 1.5;
+  color: #461704;
 }
 
 body {
+  background-color: rgb(65, 59, 59);
   width: 100%;
   height: 100%;
+  
+  main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  h1 {
+    color: black;
+  }
 
   section {
     width: 50%;
     height: 80vh;
     margin: auto;
+    margin-top:0;
 
     .machine-container {
-      background-color: rgb(243, 242, 225);
-      border: 2px solid rgb(205, 205, 192);
+      background-color: #ff9f32;
+      border: 2px solid #fcfbfaa1;
       border-radius: 3em;
-      height: 100%;
+    width: 80%;
       padding: 2rem;
       display: grid;
       grid-template-columns: 2fr 1fr;
@@ -26,12 +39,13 @@ body {
 
 
       .drinks-grid {
-        background-color: rgb(195, 195, 165);
+        background-color: rgb(92, 92, 73);
+        border: 2px solid #fcfbfaa1;
         margin: 0;
         width: 100%;
-        height: 100%;
+        height: auto;
         display: grid;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 150px 150px 150px 150px;
         grid-template-columns: 2fr 2fr 2fr;
         gap: 5em 1rem;
         grid-template-areas:
@@ -44,10 +58,11 @@ body {
           align-items: center;
           flex-direction: column;
           position: relative;
+          border: 2px solid #fcfbfaa1;
 
           img {
-            width: 100px;
-            height: 100px;
+            width: 75px;
+            height: 75px;
           }
           
           > p {
@@ -68,7 +83,7 @@ body {
             background-color: #ff9f32;
             position: absolute;
             right: 50px;
-            top: 50px;
+            top: 10px;
           }
         }
       }
@@ -77,7 +92,7 @@ body {
         margin: 0 0 0 1.5rem;
         background-color: #dad5ce;
         width: 100%;
-        height: 60%;
+        height: 40%;
         grid-area: 1 / 2 / 3 / 3;
         display: flex;
         flex-direction: column;
@@ -108,7 +123,7 @@ gap: 5px 5px;
         margin-top: 2rem;
         background-color: rgb(122, 118, 118);
         width: 100%;
-        height: 80%;
+        height: 30vh;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -125,4 +140,5 @@ gap: 5px 5px;
       }
     }
   }
+   }
 }
