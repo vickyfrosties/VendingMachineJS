@@ -48,11 +48,11 @@ const IMG_RESULT = document.getElementById("img-result");
 
 const STOCK = document.querySelectorAll(".drink-quantity");
 
-let userChoice;
+let userChoice = "";
 
 BUTTONS.forEach((button) => {
   button.addEventListener("click", () => {
-    userChoice = button.value;
+    userChoice += button.value;
 
     SCREEN.innerText = "Your current choice:" + " " + userChoice;
   });
@@ -60,9 +60,7 @@ BUTTONS.forEach((button) => {
 
 // Reset user choice
 RESET.addEventListener("click", () => {
-  userChoice = "Please choose a drink";
-
-  SCREEN.innerText = userChoice;
+  SCREEN.innerText = "Please choose a drink";
   IMG_RESULT.src = "";
 });
 
@@ -143,28 +141,53 @@ VALID.addEventListener("click", () => {
       break;
 
     case "8":
-      IMG_RESULT.src = "";
-      SCREEN.innerText = "This drink is not available atm";
+      if (ENERGY_QUANTITY.textContent > 0) {
+        ENERGY_QUANTITY.textContent -= 1;
+        IMG_RESULT.src = "./assets/energy.png";
+        SCREEN.innerText = "Enjoy your drink! 😎";
+      } else {
+        SCREEN.innerText = "Out of stock :(";
+      }
       break;
 
     case "9":
-      IMG_RESULT.src = "";
-      SCREEN.innerText = "This drink is not available atm";
+      if (LEMON_QUANTITY.textContent > 0) {
+        LEMON_QUANTITY.textContent -= 1;
+        IMG_RESULT.src = "./assets/lemon.png";
+        SCREEN.innerText = "Enjoy your drink! 😎";
+      } else {
+        SCREEN.innerText = "Out of stock :(";
+      }
       break;
 
     case "10":
-      IMG_RESULT.src = "";
-      SCREEN.innerText = "This drink is not available atm";
+      if (BIO_QUANTITY.textContent > 0) {
+        BIO_QUANTITY.textContent -= 1;
+        IMG_RESULT.src = "./assets/bio.png";
+        SCREEN.innerText = "Enjoy your drink! 😎";
+      } else {
+        SCREEN.innerText = "Out of stock :(";
+      }
       break;
 
     case "11":
-      IMG_RESULT.src = "";
-      SCREEN.innerText = "This drink is not available atm";
+      if (WATERMELON_QUANTITY.textContent > 0) {
+        WATERMELON_QUANTITY.textContent -= 1;
+        IMG_RESULT.src = "./assets/watermelon.png";
+        SCREEN.innerText = "Enjoy your drink! 😎";
+      } else {
+        SCREEN.innerText = "Out of stock :(";
+      }
       break;
 
     case "12":
-      IMG_RESULT.src = "";
-      SCREEN.innerText = "This drink is not available atm";
+      if (SPARKLING_WATER_QUANTITY.textContent > 0) {
+        SPARKLING_WATER_QUANTITY.textContent -= 1;
+        IMG_RESULT.src = "./assets/sparkling-water.png";
+        SCREEN.innerText = "Enjoy your drink! 😎";
+      } else {
+        SCREEN.innerText = "Out of stock :(";
+      }
       break;
 
     default:
@@ -179,5 +202,6 @@ function timerReset() {
   setTimeout(() => {
     SCREEN.innerText = "Please choose a drink";
     IMG_RESULT.src = "";
+    userChoice = "";
   }, 3000);
 }
